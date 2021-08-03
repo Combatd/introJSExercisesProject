@@ -15,3 +15,13 @@ Array.prototype.bubbleSort = function() {
         return this;
     }
 }
+
+String.prototype.substrings = function() {
+    let subStrings = [];
+    for (let i = 0; i < this.length; i++) {
+        for(let j = i + 1; j<= this.length; j++) {
+            subStrings.push(this.slice(i, j)); // keeps grabbing all the substrings
+        }
+    }
+    return subStrings;
+}
